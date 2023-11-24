@@ -1,18 +1,22 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 
 export default function App() {
+  // View is a container component used to hold other component . Same as div in html
   return (
-    <View style={styles.container}>
-      <Text>Hello World!!!</Text>
+    <View style={styles.appContainer}>
+      <View>
+        <TextInput placeholder="Your Course Goals" />
+        <Button title="Add Goal" />
+        <Text>List of Goals</Text>
+      </View>
+      <View></View>
+      <View></View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  appContainer: {
+    padding: 50
+  }
 });
